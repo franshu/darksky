@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+$(document).ready(function() {
 		var latitud = localStorage.getItem('latitud');
 		var longitud = localStorage.getItem('longitud');
 	$.ajax({
