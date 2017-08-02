@@ -39,6 +39,9 @@ gulp.task('style', function(){
 //3.1watch sass
 gulp.task('watch', function() {
     gulp.watch('assets/sass/*.scss',['style']); //para mirar cambios en css
+    gulp.watch('assets/js/geolocation.js',['script']);
+    gulp.watch('assets/js/main01.js',['main01']);
+    gulp.watch('assets/js/main02.js',['main02']);
 	});
 //4.1 tarea Webserver, crea el servidor web de desarrollo a ejecutarse en localhost puerto 8000
 gulp.task('webserver', function(){
@@ -52,6 +55,5 @@ gulp.task('webserver', function(){
 });
 
 
+gulp.task('default',['script', 'main01','main02', 'style','watch', 'webserver']);
 
-
-gulp.task('default',['script', 'style','watch', 'webserver']);
